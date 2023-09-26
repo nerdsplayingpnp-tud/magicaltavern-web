@@ -39,7 +39,7 @@ jobs:
           curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
           cargo binstall --no-confirm trunk --force
           rustup target add wasm32-unknown-unknown
-          trunk build --release --public-url="magicaltavern-web"
+          trunk build --release
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
