@@ -5,9 +5,7 @@ use yew::prelude::*;
 fn app() -> Html {
     html! {
         <>
-            <header>
-                <Navbar/>
-            </header>
+            <Navbar/>
             <h1>{ "Hello yew and trunk! :)" }</h1>
             <p>{"This is some text."}</p>
         </>
@@ -24,8 +22,8 @@ fn navbar() -> Html {
         <>
             <header class="p-3 text-bg-dark">
                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                    <img class="bi me-2" src="public/img/dice-anim-fix.gif" style="width: 32px; height: 32px" />
+                <a href="/" class="navbar-brand">
+                    <img class="bi me-2" src="public/img/dice-anim-fix.gif" style="width: 32px; height: 32px" alt="Ein rotierender, dunkelblauer D20, welcher nach einer 180-Grad-Rotation in Regenbogenfarben erscheint, und nach einer weiteren 180-Grad-Drehung wieder dunkelblau ist."/>
                 </a>
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
