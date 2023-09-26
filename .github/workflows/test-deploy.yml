@@ -60,10 +60,10 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build-release
-          path: dist
+          path: ./dist/
       - name: Setup Pages
         uses: actions/configure-pages@v3
-      - name: Upload artifact
+      - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v2
         with:
           # Upload dist directory
