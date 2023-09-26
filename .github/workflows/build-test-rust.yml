@@ -23,3 +23,13 @@ jobs:
       run: |
         cargo build --verbose
         cargo test --verbose
+    - name: Build Trunk Release Artifact
+      run: |
+          curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
+          cargo binstall --no-confirm trunk --force
+          trunk build --release --public-url="magicaltavern-web"
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-release
+        path: dist
